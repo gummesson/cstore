@@ -1,0 +1,46 @@
+{
+  "name": "cstore",
+  "version": "0.0.0",
+  "description": "Super tiny, closure-based data store.",
+  "main": "cstore.js",
+  "files": [
+    "LICENSE",
+    "README.md",
+    "index.js",
+    "cstore.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gummesson/cstore.git"
+  },
+  "keywords": [
+    "data",
+    "store",
+    "datastore"
+  ],
+  "author": "Ellen Gummesson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gummesson/cstore/issues"
+  },
+  "homepage": "https://github.com/gummesson/cstore",
+  "dependencies": {},
+  "devDependencies": {
+    "babel": "^5.8.19",
+    "babelify": "^6.1.3",
+    "browserify": "^11.0.1",
+    "smokestack": "^3.3.0",
+    "tap-closer": "^1.0.0",
+    "tape": "^4.0.1"
+  },
+  "browserify": {
+    "transform": "babelify"
+  },
+  "scripts": {
+    "bundle": "babel index.js > cstore.js",
+    "start": "npm run bundle",
+    "preversion": "npm run bundle",
+    "test": "npm run bundle && babel-node test.js",
+    "test:browser": "browserify test.js | tap-closer | smokestack"
+  }
+}
