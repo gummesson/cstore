@@ -1,6 +1,6 @@
 {
   "name": "cstore",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Super tiny, closure-based data store.",
   "main": "cstore.js",
   "files": [
